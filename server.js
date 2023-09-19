@@ -9,12 +9,12 @@ import dotenv from "dotenv";
 
 const app = express();
 
-dotenv.config();
-// middlewares
-app.use(express.json());
-app.use(cors());
-app.use(morgan('tiny'));
-app.disable('x-powered-by');  // less hackers know about our stack
+// dotenv.config();
+// // middlewares
+// app.use(express.json());
+// app.use(cors());
+// app.use(morgan('tiny'));
+// app.disable('x-powered-by');  // less hackers know about our stack
 // app.use(timeout('10s'));
 // app.use(haltOnTimedout)
 
@@ -30,14 +30,14 @@ app.use('/', (req, res) => {
 });
 
 // api routes
-app.use('/api', router);
+// app.use('/api', router);
 
 // function haltOnTimedout(req, res, next) {
 //   if (!req.timedout) next();
 // }
 
 // start server only when we have valid connection
-connect().then(() => {
+// connect().then(() => {
     try {
         app.listen(PORT, () => {
             console.log(`Server connected to http://localhost:${PORT}`);
@@ -45,6 +45,6 @@ connect().then(() => {
     } catch (error) {
         console.log("Cannot connect to the server");
     }
-}).catch(error => {
-    console.log("Invalid database connection..!");
-})
+// }).catch(error => {
+//     console.log("Invalid database connection..!");
+// })
