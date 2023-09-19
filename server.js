@@ -19,7 +19,7 @@ const app = express();
 // app.use(haltOnTimedout)
 
 // const port = 5000;
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 5000;
 
 
 
