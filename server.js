@@ -25,8 +25,8 @@ const PORT = process.env.PORT || 80;
 
 // HTTP GET Request
 app.use('/', (req, res) => {
-    // res.status(201).json("Home GET Request");
-    console.log("Started");
+  res.status(200).json("Home GET Request");
+  // console.log("Started");
 });
 
 // api routes
